@@ -1,0 +1,13 @@
+/*
+ * Shared Tailwind v4 configuration for the CMS frontend.
+ *
+ * Design tokens intentionally empty — the project relies on Tailwind's
+ * defaults. Imported from apps/cms/src/app/(app)/globals.css.
+ */
+
+@custom-variant dark (&:where(
+  .dark,
+  [data-mode="dark"],
+  .dark *,
+  [data-mode="dark"] *
+));

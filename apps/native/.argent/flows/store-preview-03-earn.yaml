@@ -1,0 +1,21 @@
+executionPrerequisite: >-
+  App open, signed in as a guest, on an article detail screen scrolled part
+  way down (left behind by store-preview-02-read).
+
+steps:
+  - echo: Back out of the article to the feed (back chevron, top-left)
+  - tap:
+      x: 0.06
+      y: 0.09
+  - await:
+      visible:
+        text: NEWS SPEND MEDIA
+  - wait: 700
+  - tap:
+      text: Discover
+  - await:
+      visible:
+        text: POINTS MALL
+  - await:
+      idle: true
+  - wait: 1600

@@ -1,0 +1,120 @@
+{
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "cSpell.words": [
+    "astro",
+    "astrojs",
+    "autoapply",
+    "bigcommerce",
+    "clsx",
+    "Codegen",
+    "deepmerge",
+    "Embla",
+    "Fusionary",
+    "headlessui",
+    "heroicons",
+    "jiti",
+    "Lucide",
+    "Nextjs",
+    "oidc",
+    "oklch",
+    "payloadcms",
+    "RESIZER",
+    "Skus",
+    "tada",
+    "tailwind",
+    "tailwindcss",
+    "Terrateam",
+    "tsbuildinfo",
+    "tsup",
+    "turborepo"
+  ],
+  "debug.console.closeOnEnd": true,
+  "editor.codeActionsOnSave": {
+    "source.formatDocument": "explicit",
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.astro": true,
+    "**/.bundle": true,
+    "**/.cache": true,
+    "**/.git": true,
+    "**/.husky": true,
+    "**/.idea": true,
+    "**/.next": true,
+    "**/.open-next": true,
+    "**/.parcel-cache": true,
+    "**/.sst": true,
+    "**/.svelte-kit": true,
+    "**/.turbo": true,
+    "**/Thumbs.db": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/node_modules": true
+  },
+  "files.insertFinalNewline": true,
+  "prettier.documentSelectors": ["**/*.astro"],
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["(?:twMerge|twJoin|cn)\\(([^\\);]*)[\\);]", "[`'\"`]([^'\"`,;]*)[`'\"`]"],
+    ["className[=:]\\s*", "[\"'`]([^\"'`]*)[\"'`]"]
+  ],
+  "tailwindCSS.experimental.configFile": "./tooling/tailwind/src/tailwind.ts",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "next/router.d.ts",
+    "next/dist/client/router.d.ts"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnPaste": true,
+  "emmet.showExpandedAbbreviation": "never",
+  "[graphql]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
+}

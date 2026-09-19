@@ -1,0 +1,25 @@
+executionPrerequisite: >-
+  App open, signed in as a guest, on the Home news feed scrolled part way
+  down (left behind by store-preview-01-open).
+
+steps:
+  - echo: Scroll back to the top of the feed
+  - tool: gesture-swipe
+    args: { fromX: 0.5, fromY: 0.35, toX: 0.5, toY: 0.75, durationMs: 600 }
+  - wait: 800
+  - tap:
+      text: Entertainment
+  - await:
+      idle: true
+  - wait: 900
+  - echo: Open the first article row below the leading ad card (live feed, tap by position)
+  - tap:
+      x: 0.55
+      y: 0.30
+  - await:
+      visible:
+        text: KEY POINTS
+  - wait: 1400
+  - tool: gesture-swipe
+    args: { fromX: 0.5, fromY: 0.7, toX: 0.5, toY: 0.4, durationMs: 800 }
+  - wait: 1400

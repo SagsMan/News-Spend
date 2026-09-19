@@ -1,0 +1,81 @@
+{
+  "compounds": [
+    {
+      "configurations": ["Astro", "Payload"],
+      "name": "Astro + Payload",
+      "presentation": {
+        "group": "Astro + Payload"
+      },
+      "stopAll": true
+    },
+    {
+      "configurations": ["Next", "Payload"],
+      "name": "Next + Payload",
+      "presentation": {
+        "group": "Next + Payload"
+      },
+      "stopAll": true
+    },
+    {
+      "configurations": ["Svelte", "Payload"],
+      "name": "Svelte + Payload",
+      "presentation": {
+        "group": "Svelte + Payload"
+      },
+      "stopAll": true
+    }
+  ],
+  "configurations": [
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/",
+      "name": "Astro",
+      "request": "launch",
+      "runtimeArgs": ["dev", "--filter", "astro..."],
+      "runtimeExecutable": "pnpm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/",
+      "name": "Next",
+      "request": "launch",
+      "runtimeArgs": ["dev", "--filter", "next..."],
+      "runtimeExecutable": "pnpm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/",
+      "name": "Payload",
+      "request": "launch",
+      "runtimeArgs": ["dev", "--filter", "payload..."],
+      "runtimeExecutable": "pnpm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/",
+      "name": "Svelte",
+      "request": "launch",
+      "runtimeArgs": ["dev", "--filter", "svelte..."],
+      "runtimeExecutable": "pnpm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/",
+      "name": "Docs",
+      "request": "launch",
+      "runtimeArgs": ["storybook"],
+      "runtimeExecutable": "pnpm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    }
+  ],
+  "version": "0.2.0"
+}

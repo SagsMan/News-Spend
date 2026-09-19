@@ -1,0 +1,14 @@
+# Screenshot 5 — the Shop tab: cash back at partner stores.
+# Assumes the guest session from store-01-home.
+steps:
+  - launch: com.newsspend.app
+  - await:
+      visible:
+        text: NEWS SPEND MEDIA
+  - tap:
+      text: Shop
+  - await:
+      visible:
+        text: Earn credit while shopping at your favorite store
+  - await:
+      idle: true

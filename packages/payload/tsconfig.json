@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "ES2022"],
+    "paths": {
+      "@news-spend-media/payload/*": ["./src/*"],
+      "@news-spend-media/payload/access/*": ["./src/access/*"],
+      "@news-spend-media/payload/blocks/*": ["./src/blocks/*"],
+      "@news-spend-media/payload/collections/*": ["./src/collections/*"],
+      "@news-spend-media/payload/components/*": ["./src/components/*"],
+      "@news-spend-media/payload/fields/*": ["./src/fields/*"],
+      "@news-spend-media/payload/globals/*": ["./src/globals/*"],
+      "@news-spend-media/payload/helpers/*": ["./src/helpers/*"],
+      "@news-spend-media/payload/hooks/*": ["./src/hooks/*"],
+      "@news-spend-media/payload/payload-config": ["./src/payload.config"],
+      "@news-spend-media/payload/payload-types": ["./src/payload-types"],
+      "@news-spend-media/payload/plugins/*": ["./src/plugins/*"]
+    },
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "strictNullChecks": true
+  },
+  // `test` holds the integration tests. They build fixture rows through the
+  // Local API, and Payload's generated create types demand every required
+  // field including ones the collection defaults, satisfying them means
+  // spelling out defaults in every fixture, which buries what a test is
+  // actually setting. They are executed by `test:integration`, which is where
+  // a real mistake in them surfaces.
+  "exclude": ["node_modules", "src/payload.types.ts", ".next", "test"],
+  "extends": "@news-spend-media/config/tsconfig.base.json"
+}

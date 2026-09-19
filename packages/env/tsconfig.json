@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "ES2022"],
+    "paths": {
+      "@news-spend-media/env/*": ["./src/*.ts"],
+      "@news-spend-media/env/helpers/*": ["./src/helpers/*.ts"]
+    },
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "types": ["node"],
+    "strictNullChecks": true
+  },
+  "exclude": ["node_modules"],
+  "extends": "@news-spend-media/config/tsconfig.internal.json"
+}

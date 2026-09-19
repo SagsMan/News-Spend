@@ -1,0 +1,89 @@
+FROM oven/bun:1.4.0 AS builder
+WORKDIR /app
+
+ARG NEXT_PUBLIC_API_URL
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
+
+# Source map upload happens at build time. Without the token the Sentry webpack
+# plugin skips uploading rather than failing, so the build still succeeds.
+# Stack traces in Sentry are just left minified.
+ARG SENTRY_AUTH_TOKEN
+ENV SENTRY_AUTH_TOKEN=$SENTRY_AUTH_TOKEN
+ARG SENTRY_ORG
+ENV SENTRY_ORG=$SENTRY_ORG
+ARG SENTRY_PROJECT
+ENV SENTRY_PROJECT=$SENTRY_PROJECT
+
+# Inlined into the client bundle, so they must be present during `next build`.
+ARG NEXT_PUBLIC_SENTRY_DSN
+ENV NEXT_PUBLIC_SENTRY_DSN=$NEXT_PUBLIC_SENTRY_DSN
+ARG NEXT_PUBLIC_APP_ENV
+ENV NEXT_PUBLIC_APP_ENV=$NEXT_PUBLIC_APP_ENV
+ARG RAILWAY_GIT_COMMIT_SHA
+ENV RAILWAY_GIT_COMMIT_SHA=$RAILWAY_GIT_COMMIT_SHA
+# Same value under a NEXT_PUBLIC_ name so it survives into the browser bundle,
+# which is the only way client-side events get tagged with a release.
+ENV NEXT_PUBLIC_SENTRY_RELEASE=$RAILWAY_GIT_COMMIT_SHA
+
+RUN apt-get update && apt-get -yqq --no-install-recommends install \
+    build-essential \
+    python3 \
+    make \
+    g++ \
+    pkg-config \
+    git \
+    ca-certificates \
+    libvips-dev \
+    autoconf \
+    automake \
+    libtool \
+    && rm -rf /var/lib/apt/lists/*
+COPY bun.lock ./
+# Carries `linker = "hoisted"`. Bun 1.4 defaults workspaces to isolated
+# linking, where a package resolves only what it declares itself — so without
+# this file the image installs a different dependency layout than every
+# developer machine, and any package that has been quietly relying on a
+# hoisted sibling's dependency fails here and nowhere else.
+COPY bunfig.toml ./
+COPY package.json ./
+COPY turbo.json ./
+COPY patches ./patches
+COPY packages ./packages
+COPY apps ./apps
+COPY tooling ./tooling
+RUN bun install --lockfile-only --ignore-scripts && bun install --ignore-scripts
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+# next.config.ts reads this for both `deploymentId` and `generateBuildId`, and
+# next.config is evaluated while the image builds, not when it runs. Railway
+# exposes the variable to the container but Docker does not pass it into the
+# build without an ARG, so without this it is undefined exactly where it is
+# read: `generateBuildId` returns null and Next falls back to a fresh random
+# build id each time, while an unset `deploymentId` leaves skew protection off.
+#
+# Declared here rather than beside the other build args because its value is
+# new on every deploy, including a redeploy of an unchanged commit. Any layer
+# below an ENV that always changes can never be reused, so putting it above
+# `bun install` would reinstall system packages and dependencies every time.
+ARG RAILWAY_DEPLOYMENT_ID
+ENV RAILWAY_DEPLOYMENT_ID=$RAILWAY_DEPLOYMENT_ID
+RUN bun turbo build --filter=@news-spend-media/cms...
+
+FROM oven/bun:1.4.0 AS runtime
+WORKDIR /app
+RUN apt-get update && apt-get -yqq --no-install-recommends install \
+    ca-certificates \
+    ffmpeg \
+    libvips \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /app/apps/cms/.next/standalone ./
+COPY --from=builder /app/apps/cms/.next/static ./apps/cms/.next/static
+COPY --from=builder /app/apps/cms/public ./apps/cms/public
+
+EXPOSE 3000
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV HOSTNAME=0.0.0.0
+ENV PORT=3000
+CMD ["sh", "-c", "NODE_ENV=production bun apps/cms/server.js"]

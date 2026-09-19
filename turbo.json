@@ -1,0 +1,101 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": ["**/.env", "**/.env.development", "**/.env.prod"],
+  "globalEnv": [
+    "CI",
+    "NODE_ENV",
+    "NEXT_PUBLIC_APP_ENV",
+    "NEXT_PUBLIC_PAYLOAD_URL",
+    "NEXT_PUBLIC_API_URL",
+    "NEXT_PUBLIC_SITE_URL",
+    "PAYLOAD_PRIVATE_DATABASE_URI",
+    "PAYLOAD_PRIVATE_SECRET",
+    "PAYLOAD_PRIVATE_REVALIDATION_KEY",
+    "SKIP_ENV_VALIDATION",
+    "npm_lifecycle_event",
+    "DATABASE_URI",
+    "CORS_ORIGIN",
+    "RESEND_API_KEY",
+    "SMTP_USER_FROM",
+    "EMAIL_FROM",
+    "APP_URL",
+    "PAYLOAD_SECRET",
+    "SFTP_HOST",
+    "SFTP_USERNAME",
+    "SFTP_PASSWORD",
+    "RESEND_DEFAULT_FROM_NAME",
+    "SFTP_PORT",
+    "RESEND_DEFAULT_FROM_ADDRESS",
+    "APP_ENV",
+    "API_URL",
+    "RAILWAY_PUBLIC_DOMAIN",
+    "CPX_APP_ID",
+    "CPX_SECURE_HASH",
+    "RAILWAY_ENVIRONMENT",
+    "REDIS_URL",
+    "RAPIDO_API_KEY",
+    "RAPIDO_APP_ID",
+    "RAPIDO_SECURE_HASH",
+    "THEOREM_API_KEY",
+    "THEOREM_REACH_URL",
+    "PORT",
+    "SENTRY_DSN",
+    "SENTRY_ORG",
+    "SENTRY_PROJECT",
+    "SENTRY_AUTH_TOKEN",
+    "SENTRY_ENABLED",
+    "SENTRY_TRACES_SAMPLE_RATE",
+    "NEXT_PUBLIC_SENTRY_DSN",
+    "NEXT_PUBLIC_SENTRY_ENABLED",
+    "NEXT_PUBLIC_SENTRY_TRACES_SAMPLE_RATE",
+    "NEXT_PUBLIC_SENTRY_RELEASE",
+    "RAILWAY_GIT_COMMIT_SHA"
+  ],
+  "remoteCache": {
+    "enabled": true
+  },
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        "next-env.d.ts",
+        ".expo/**",
+        ".output/**",
+        ".vercel/output/**",
+        "storybook-static/**",
+        "dist/**"
+      ]
+    },
+    "clean": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "format": {
+      "cache": false
+    },
+    "lint": {
+      "dependsOn": ["^topo"]
+    },
+    "test": {
+      "dependsOn": ["^topo"],
+      "outputs": []
+    },
+    "storybook": {
+      "cache": true,
+      "persistent": true
+    },
+    "topo": {
+      "dependsOn": ["^topo"]
+    },
+    "typecheck": {
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/tsbuildinfo.json"]
+    }
+  },
+  "ui": "tui"
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "root": true,
+  "extends": [
+    "ultracite/biome/core",
+    "ultracite/biome/react",
+    "ultracite/biome/vitest",
+    "ultracite/biome/tanstack",
+    "ultracite/biome/next"
+  ],
+  "javascript": {
+    "globals": ["Bun", "__DEV__", "jest"]
+  },
+  "linter": {
+    "rules": {
+      "a11y": {
+        "useMediaCaption": "info"
+      },
+      "style": {
+        "useConsistentTypeDefinitions": {
+          "level": "info",
+          "fix": "safe",
+          "options": {
+            "style": "type"
+          }
+        },
+        "useFilenamingConvention": "off",
+        "noNonNullAssertion": "info",
+        "noNestedTernary": "off",
+        "noSubstr": "info",
+        "useConsistentMemberAccessibility": "info",
+        "noParameterProperties": "info",
+        "noParameterAssign": "info",
+        "noHeadElement": "info"
+      },
+      "suspicious": {
+        "noExplicitAny": "info",
+        "noBitwiseOperators": "off",
+        "noEmptyBlockStatements": "info",
+        "noArrayIndexKey": "info",
+        "useAwait": "info",
+        "noUnusedExpressions": "info",
+        "noNonNullAssertedOptionalChain": "info",
+        "noDuplicateCustomProperties": "info",
+        "noControlCharactersInRegex": "info",
+        "noUnknownAtRules": "info",
+        "noEvolvingTypes": "info",
+        "noEmptySource": "info",
+        "useIterableCallbackReturn": "info"
+      },
+      "performance": {
+        "noNamespaceImport": "off",
+        "noBarrelFile": "off",
+        "useTopLevelRegex": "info",
+        "noAccumulatingSpread": "info"
+      },
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "info",
+        "noForEach": "info",
+        "noBannedTypes": "info"
+      },
+      "correctness": {
+        "noUnusedFunctionParameters": "info",
+        "noUnusedVariables": "info",
+        "useExhaustiveDependencies": "info",
+        "noInvalidUseBeforeDeclaration": "info",
+        "noUnsafeOptionalChaining": "info"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": [
+        "**/uniwind-types.d.ts",
+        "**/migrations/**",
+        "**/payload-types.d.ts",
+        "**/payload-generated-schema.ts"
+      ],
+      "linter": {
+        "enabled": false
+      },
+      "formatter": {
+        "enabled": false
+      }
+    }
+  ]
+}

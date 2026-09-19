@@ -1,0 +1,25 @@
+{
+  "name": "@news-spend-media/mail",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@news-spend-media/logger": "workspace:*",
+    "@news-spend-media/transactional": "workspace:*",
+    "@react-email/render": "^1.0.2",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "resend": "^6.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "typescript": "catalog:"
+  }
+}

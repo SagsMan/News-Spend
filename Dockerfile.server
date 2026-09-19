@@ -1,0 +1,29 @@
+FROM oven/bun:1.4.0
+
+WORKDIR /app
+
+RUN apt-get update && apt-get -yqq --no-install-recommends install \
+    libvips \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY bun.lock ./
+# See Dockerfile.cms: pins the hoisted linker so the image resolves modules the
+# same way local does. This service does not currently depend on a hoisted
+# sibling, but nothing stops it from starting to.
+COPY bunfig.toml ./
+COPY package.json ./
+COPY turbo.json ./
+COPY patches ./patches
+COPY packages ./packages
+COPY apps/server ./apps/server
+COPY tooling ./tooling
+
+RUN bun install --ignore-scripts
+
+EXPOSE 9000
+
+ENV NODE_ENV=production
+ENV PORT=9000
+ENV HOSTNAME=0.0.0.0
+
+CMD ["bun", "run", "--filter=@news-spend-media/server", "start"]

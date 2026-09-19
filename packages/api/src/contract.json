@@ -1,0 +1,655 @@
+{
+  "account": {
+    "updateProfile": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "changePassword": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "createPushToken": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "deletePushToken": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {
+          "method": "POST",
+          "path": "/account/delete-push-token",
+          "summary": "Delete push token",
+          "tags": ["account"]
+        }
+      }
+    },
+    "me": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "activity": {
+    "add": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "totalPoints": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "byUserId": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "byNewsId": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "block": {
+    "blockUser": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "unblockUser": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "getBlockedUsers": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "ads": {
+    "getPromoMedia": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {
+          "method": "GET",
+          "path": "/ads/promo-media",
+          "tags": ["Ads"],
+          "summary": "Get promo media",
+          "description": "Get promo media for the current user"
+        }
+      }
+    }
+  },
+  "comments": {
+    "all": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "one": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "create": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "update": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "delete": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "like": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "dislike": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "feedback": {
+    "create": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "lottery": {
+    "all": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "one": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "current": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "getReward": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "claimReward": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "verifyIdentity": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "identityStatus": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "lotteryTicket": {
+    "create": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "getByUser": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "get": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "purchaseLog": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "boostLuck": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "news": {
+    "all": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "trending": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "recordView": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "one": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "home": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "liveVideos": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "relatedNews": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "like": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "dislike": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "categories": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {
+          "method": "GET",
+          "path": "/news/categories",
+          "tags": ["news"],
+          "summary": "Get all news categories"
+        }
+      }
+    },
+    "analytics": {
+      "track": {
+        "~orpc": {
+          "errorMap": {},
+          "meta": {},
+          "route": {}
+        }
+      },
+      "articleStats": {
+        "~orpc": {
+          "errorMap": {},
+          "meta": {},
+          "route": {}
+        }
+      },
+      "topArticles": {
+        "~orpc": {
+          "errorMap": {},
+          "meta": {},
+          "route": {}
+        }
+      }
+    }
+  },
+  "notificationSettings": {
+    "update": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "get": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "notifications": {
+    "testNotification": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "newsCreate": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "sendLotteryNotification": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "trackOpen": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "partnerAnalytics": {
+    "overview": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "trends": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "byStore": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "partnerContent": {
+    "all": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "byId": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "filtered": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "getOne": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "random": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "partnerConversions": {
+    "trackClick": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "webhook": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {
+          "method": "POST",
+          "path": "/partner-conversions/webhook",
+          "tags": ["Partner Conversions"],
+          "summary": "Partner Conversion Webhook",
+          "description": "Webhook endpoint for partners to confirm CPA conversions. Call this when a user completes a task (install, purchase, etc.)."
+        }
+      }
+    }
+  },
+  "postReport": {
+    "create": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "publisher": {
+    "onMessage": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "sendMessage": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "report": {
+    "create": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {
+          "method": "POST",
+          "path": "/report/create"
+        }
+      }
+    }
+  },
+  "store": {
+    "all": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "popular": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "one": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "trackView": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "trackClick": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    }
+  },
+  "survey": {
+    "awardGoogleFormPoints": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {
+          "method": "POST",
+          "path": "/survey/gFormAwardPoint",
+          "summary": "Award point for google forms",
+          "tags": ["survey"]
+        }
+      }
+    },
+    "getAll": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {}
+      }
+    },
+    "cpx": {
+      "getSurveys": {
+        "~orpc": {
+          "errorMap": {},
+          "meta": {},
+          "route": {}
+        }
+      },
+      "postback": {
+        "~orpc": {
+          "errorMap": {},
+          "meta": {},
+          "route": {
+            "method": "GET",
+            "path": "/survey/cpx/postback",
+            "tags": ["survey", "cpx"],
+            "summary": "CPX Research postback endpoint (GET)",
+            "description": "Receives survey conversion notifications from CPX Research."
+          }
+        }
+      }
+    },
+    "offers": {
+      "getOffers": {
+        "~orpc": {
+          "errorMap": {},
+          "meta": {},
+          "route": {}
+        }
+      }
+    },
+    "rapidoPostback": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {
+          "method": "GET",
+          "path": "/survey/rapido/postback",
+          "tags": ["survey", "rapido"],
+          "summary": "RapidoReach postback endpoint",
+          "description": "Receives survey conversion notifications from RapidoReach. See docs: https://docs.rapidoreach.com/docs/v2/api/callbacks"
+        }
+      }
+    },
+    "theoremPostback": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {
+          "method": "GET",
+          "path": "/survey/theorem/postback",
+          "tags": ["survey", "theorem"],
+          "summary": "TheoremReach postback endpoint",
+          "description": "Receives survey conversion notifications from TheoremReach."
+        }
+      }
+    }
+  },
+  "tweet": {
+    "getById": {
+      "~orpc": {
+        "errorMap": {},
+        "meta": {},
+        "route": {
+          "method": "GET",
+          "path": "/tweet/{id}",
+          "tags": ["Tweet"],
+          "summary": "Get tweet by ID",
+          "description": "Fetch a tweet by its ID from Twitter"
+        }
+      }
+    }
+  }
+}

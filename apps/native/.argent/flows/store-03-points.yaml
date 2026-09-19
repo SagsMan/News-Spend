@@ -1,0 +1,14 @@
+# Screenshot 3 — the Points Mall (Discover tab): apps, games, books and
+# surveys that each pay points. Assumes the guest session from store-01-home.
+steps:
+  - launch: com.newsspend.app
+  - await:
+      visible:
+        text: NEWS SPEND MEDIA
+  - tap:
+      text: Discover
+  - await:
+      visible:
+        text: POINTS MALL
+  - await:
+      idle: true

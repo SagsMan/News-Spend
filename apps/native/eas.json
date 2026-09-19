@@ -1,0 +1,85 @@
+{
+  "cli": {
+    "version": ">= 0.52.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "betaAPK": {
+      "android": {
+        "buildType": "apk",
+        "autoIncrement": true
+      },
+      "channel": "beta",
+      "developmentClient": false,
+      "env": {
+        "APP_VARIANT": "beta"
+      }
+    },
+    "betaAAB": {
+      "android": {
+        "buildType": "app-bundle",
+        "autoIncrement": true
+      },
+      "channel": "beta",
+      "developmentClient": false,
+      "env": {
+        "APP_VARIANT": "beta"
+      }
+    },
+    "development": {
+      "android": {
+        "buildType": "apk"
+      },
+      "channel": "development",
+      "distribution": "internal",
+      "developmentClient": true,
+      "env": {
+        "APP_VARIANT": "development"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "preview",
+      "autoIncrement": true,
+      "env": {
+        "APP_VARIANT": "preview",
+        "EXPO_PUBLIC_API_URL": "https://staging-api.newsspend.com"
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle",
+        "autoIncrement": true
+      },
+      "ios": {
+        "autoIncrement": "buildNumber"
+      },
+      "channel": "production",
+      "env": {
+        "APP_VARIANT": "production"
+      }
+    },
+    "screenshots": {
+      "ios": {
+        "simulator": true
+      },
+      "android": {
+        "buildType": "apk"
+      },
+      "developmentClient": false,
+      "distribution": "internal",
+      "environment": "production",
+      "env": {
+        "APP_VARIANT": "production",
+        "EXPO_PUBLIC_SCREENSHOT_MODE": "1"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "track": "internal"
+      }
+    }
+  }
+}

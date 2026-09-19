@@ -1,0 +1,232 @@
+{
+  "expo": {
+    "name": "News Spend",
+    "slug": "news-spend-media",
+    "scheme": "news-spend",
+    "description": "News Spend Media is a news and media platform designed to empower people through the power of information. We believe that the right information should inspire action, create opportunities, and help people move closer to the future they envision. More than a traditional news app, News Spend Media combines informative content, interactive media experiences, and meaningful engagement opportunities that help users stay informed while progressing toward their personal aspirations through our unique Dream Fulfillment ecosystem.\n\nStay Informed. Stay Empowered.\n• Access breaking news and trending stories from Nigeria and around the world\n• Explore business, entertainment, lifestyle, sports, technology, politics, and more\n• Listen to selected radio stations available within the app\n• Watch engaging videos, interviews, and trailers\n• Earn Dream Points through reading news and participating in eligible activities\n• Track your progress toward goals and aspirations through the Dream Fulfillment ecosystem",
+    "assetBundlePatterns": ["assets/images/*", "assets/icons/*"],
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/icons/icon.png",
+    "experiments": {
+      "tsconfigPaths": true,
+      "reactCompiler": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icons/adaptive-icon.png"
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "link.newsspend.com",
+              "pathPrefix": "/"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        },
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "newspend.godetour.link",
+              "pathPrefix": "/Mf4vgZvonH"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "plugins": [
+      "expo-status-bar",
+      "expo-video",
+      "expo-image",
+      "expo-asset",
+      "expo-dev-client",
+      "expo-localization",
+      "expo-web-browser",
+      "expo-secure-store",
+      "@rnrepo/expo-config-plugin",
+      "@react-native-community/datetimepicker",
+      [
+        "expo-navigation-bar",
+        {
+          "enforceContrast": false
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          },
+          "android": {
+            "abiFilters": ["arm64-v8a", "armeabi-v7a"],
+            "enableProguardInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "packagingOptions": {
+              "pickFirst": [
+                "lib/arm64-v8a/libNitroModules.so",
+                "lib/armeabi-v7a/libNitroModules.so",
+                "lib/x86/libNitroModules.so",
+                "lib/x86_64/libNitroModules.so"
+              ]
+            }
+          }
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icons/notification.png",
+          "color": "#ffffff",
+          "defaultChannel": "default",
+          "enableBackgroundRemoteNotifications": false
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#00233D",
+          "image": "./assets/images/splash-icon.png",
+          "dark": {
+            "image": "./assets/images/splash-icon.png",
+            "backgroundColor": "#00233D"
+          },
+          "imageWidth": 150
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Inter-Regular.otf",
+            "./assets/fonts/Inter-Medium.otf",
+            "./assets/fonts/Inter-SemiBold.otf",
+            "./assets/fonts/Inter-Bold.otf"
+          ]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow News Spend to access your photos to upload images for content reporting and identity verification.",
+          "cameraPermission": "Allow News Spend to access your camera to take photos for identity verification and content reporting."
+        }
+      ],
+      [
+        "expo-dev-client",
+        {
+          "launchMode": "most-recent",
+          "toolsButton": "false",
+          "skipOnboarding": "true",
+          "showMenuAtLaunch": "false"
+        }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "news-spend-media",
+          "organization": "news-spend-media",
+          "useNativeInit": true
+        }
+      ],
+      [
+        "react-native-share",
+        {
+          "ios": [
+            "fb",
+            "instagram",
+            "twitter",
+            "tiktoksharesdk",
+            "whatsapp",
+            "fbmessenger"
+          ],
+          "android": [
+            "com.facebook.katana",
+            "com.instagram.android",
+            "com.twitter.android",
+            "com.zhiliaoapp.musically",
+            "com.whatsapp",
+            "com.facebook.orca"
+          ]
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3654282727219827~3509263491",
+          "iosAppId": "ca-app-pub-3654282727219827~2761369599",
+          "delayAppMeasurementInit": true,
+          "optimizeInitialization": true,
+          "optimizeAdLoading": true,
+          "userTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you.",
+          "skAdNetworkItems": [
+            "cstr6suwn9.skadnetwork",
+            "4fzdc2evr5.skadnetwork",
+            "4pfyvq9l8r.skadnetwork",
+            "2fnua5tdw4.skadnetwork",
+            "ydx93a7ass.skadnetwork",
+            "5a6flpkh64.skadnetwork",
+            "p78axxw29g.skadnetwork",
+            "v72qych5uu.skadnetwork",
+            "ludvb6z3bs.skadnetwork",
+            "cp8zw746q7.skadnetwork",
+            "3sh42y64q3.skadnetwork",
+            "c6k4g5qg8m.skadnetwork",
+            "s39g8k73mm.skadnetwork",
+            "3qy4746246.skadnetwork",
+            "f38h382jlk.skadnetwork",
+            "hs6bdukanm.skadnetwork",
+            "v4nxqhlyqp.skadnetwork",
+            "wzmmz9fp6w.skadnetwork",
+            "yclnxrl5pm.skadnetwork",
+            "t38b2kh725.skadnetwork",
+            "7ug5zh24hu.skadnetwork",
+            "gta9lk7p23.skadnetwork",
+            "vutu7akeur.skadnetwork",
+            "y5ghdn5j9k.skadnetwork",
+            "n6fk4nfna4.skadnetwork",
+            "v9wttpbfk9.skadnetwork",
+            "n38lu8286q.skadnetwork",
+            "47vhws6wlr.skadnetwork",
+            "kbd757ywx3.skadnetwork",
+            "9t245vhmpl.skadnetwork",
+            "eh6m2bh4zr.skadnetwork",
+            "a2p9lx4jpn.skadnetwork",
+            "22mmun2rn5.skadnetwork",
+            "4468km3ulz.skadnetwork",
+            "2u9pt9hc89.skadnetwork",
+            "8s468mfl3y.skadnetwork",
+            "klf5c3l5u5.skadnetwork",
+            "ppxm28t8ap.skadnetwork",
+            "ecpz2srf59.skadnetwork",
+            "uw77j35x4d.skadnetwork",
+            "pwa73g5rt2.skadnetwork",
+            "mlmmfzh3r3.skadnetwork",
+            "578prtvx9j.skadnetwork",
+            "4dzt52r2t5.skadnetwork",
+            "e5fvkxwrpn.skadnetwork",
+            "8c4e2ghe7u.skadnetwork",
+            "zq492l623r.skadnetwork",
+            "3rd42ekr43.skadnetwork",
+            "3qcr597p9d.skadnetwork"
+          ]
+        }
+      ],
+      [
+        "expo-tracking-transparency",
+        {
+          "userTrackingPermission": "This identifier will be used to deliver personalized ads to you."
+        }
+      ]
+    ],
+    "owner": "web79"
+  }
+}

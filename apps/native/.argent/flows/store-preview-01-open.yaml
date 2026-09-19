@@ -1,0 +1,36 @@
+# Preview segment 1 — open the app and land on the news feed.
+# First segment: launches and does the one-time guest onboarding.
+steps:
+  - launch: com.newsspend.app
+
+  - await:
+      visible:
+        text: Ask App Not to Track
+  - tap:
+      text: Ask App Not to Track
+
+  - await:
+      visible:
+        text: Continue as a guest
+  - tap:
+      text: Continue as a guest
+
+  - echo: Tick the unlabeled "I agree" checkbox at the left of the Terms/Privacy row
+  - tap:
+      x: 0.11
+      y: 0.547
+  - await:
+      visible:
+        text: "YES, SKIP"
+  - tap:
+      text: "YES, SKIP"
+
+  - await:
+      visible:
+        text: Trending Books
+  - await:
+      idle: true
+  - wait: 1400
+  - tool: gesture-swipe
+    args: { fromX: 0.5, fromY: 0.72, toX: 0.5, toY: 0.4, durationMs: 700 }
+  - wait: 1200

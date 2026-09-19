@@ -1,0 +1,13 @@
+executionPrerequisite: >-
+  App open, signed in as a guest, on the Points Mall (Discover tab), left
+  behind by store-preview-03-earn.
+
+steps:
+  - tap:
+      text: Giveaway
+  - await:
+      visible:
+        text: Win Dream Points
+  - await:
+      idle: true
+  - wait: 2200

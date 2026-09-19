@@ -1,0 +1,27 @@
+{
+  "name": "@news-spend-media/utils",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./*": "./src/*/index.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "bun x biome format .",
+    "format:fix": "bun x biome format --write .",
+    "lint": "bun x biome lint .",
+    "lint:fix": "bun x biome check --write .",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "slugify": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@news-spend-media/config": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  }
+}

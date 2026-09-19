@@ -1,0 +1,27 @@
+# Screenshot 2 — a full article (headline, key points, body, reactions).
+# Assumes the guest session from store-01-home. The feed is live production
+# content, so the flow opens the first article in a category by position
+# rather than by headline text (which changes every day).
+steps:
+  - launch: com.newsspend.app
+  - await:
+      visible:
+        text: NEWS SPEND MEDIA
+
+  # Entertainment tends to carry lighter stories than the default Latest tab.
+  - tap:
+      text: Entertainment
+  - await:
+      idle: true
+  - wait: 800
+
+  - echo: Open the first article row below the leading ad card (feed is live, so tap by position)
+  - tap:
+      x: 0.55
+      y: 0.30
+
+  - await:
+      visible:
+        text: KEY POINTS
+  - await:
+      idle: true

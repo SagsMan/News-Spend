@@ -1,0 +1,169 @@
+{
+  "format_on_save": "on",
+  "formatter": "language_server",
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "tsserver": {
+            "maxTsServerMemory": 3072
+          },
+          "disableAutomaticTypeAcquisition": true,
+          "preferences": {
+            "includePackageJsonAutoImports": "off"
+          },
+          "suggest": {
+            "autoImports": true
+          }
+        },
+        "javascript": {
+          "tsserver": {
+            "maxTsServerMemory": 3072
+          },
+          "disableAutomaticTypeAcquisition": true,
+          "preferences": {
+            "includePackageJsonAutoImports": "off"
+          },
+          "suggest": {
+            "autoImports": true
+          }
+        }
+      }
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "classAttributes": [
+          "class",
+          "className",
+          "headerClassName",
+          "contentContainerClassName",
+          "columnWrapperClassName",
+          "endFillColorClassName",
+          "imageClassName",
+          "tintColorClassName",
+          "ios_backgroundColorClassName",
+          "thumbColorClassName",
+          "trackColorOnClassName",
+          "trackColorOffClassName",
+          "selectionColorClassName",
+          "cursorColorClassName",
+          "underlineColorAndroidClassName",
+          "placeholderTextColorClassName",
+          "selectionHandleColorClassName",
+          "colorsClassName",
+          "progressBackgroundColorClassName",
+          "titleColorClassName",
+          "underlayColorClassName",
+          "colorClassName",
+          "drawerBackgroundColorClassName",
+          "statusBarBackgroundColorClassName",
+          "backdropColorClassName",
+          "backgroundColorClassName",
+          "ListFooterComponentClassName",
+          "ListHeaderComponentClassName"
+        ],
+        "classFunctions": [
+          "useResolveClassNames"
+        ]
+      }
+    }
+  },
+  "languages": {
+    "JavaScript": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      },
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "language_servers": [
+        "vtsls",
+        "biome",
+        "tailwindcss-language-server",
+        "!eslint",
+        "!oxlint",
+        "!oxfmt",
+        "!typescript-language-server"
+      ]
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      },
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "language_servers": [
+        "vtsls",
+        "biome",
+        "tailwindcss-language-server",
+        "!eslint",
+        "!oxlint",
+        "!oxfmt",
+        "!typescript-language-server"
+      ]
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      },
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "language_servers": [
+        "vtsls",
+        "biome",
+        "tailwindcss-language-server",
+        "!eslint",
+        "!oxlint",
+        "!oxfmt",
+        "!typescript-language-server"
+      ]
+    }
+  },
+  "context_servers": {
+    "argent": {
+      "source": "custom",
+      "command": "argent",
+      "args": [
+        "mcp"
+      ]
+    }
+  },
+  "agent": {
+    "tool_permissions": {
+      "default": "allow"
+    }
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/node_modules",
+    "**/.next",
+    "**/.turbo",
+    "**/.expo",
+    "**/dist",
+    "**/build",
+    "apps/native/ios",
+    "apps/native/android",
+    "**/.codegraph",
+    "**/.act",
+    "**/.sisyphus",
+    "**/.omo",
+    "**/Pods",
+    "**/*.xcworkspace",
+    "**/*.xcodeproj"
+  ]
+}

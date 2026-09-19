@@ -1,0 +1,48 @@
+{
+  "name": "@news-spend-media/api",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./contract.json": {
+      "default": "./src/contract.json"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {
+    "export:contract": "node --import tsx/esm src/scripts/router-to-contract.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@news-spend-media/auth": "workspace:*",
+    "@news-spend-media/db": "workspace:*",
+    "@news-spend-media/logger": "workspace:*",
+    "@news-spend-media/payload": "workspace:*",
+    "@orpc/bun": "2.0.0-beta.28",
+    "@orpc/client": "catalog:",
+    "@orpc/contract": "catalog:",
+    "@orpc/openapi": "catalog:",
+    "@orpc/publisher": "catalog:",
+    "@orpc/ratelimit": "catalog:",
+    "@orpc/server": "catalog:",
+    "@orpc/zod": "catalog:",
+    "@payloadcms/db-postgres": "catalog:",
+    "@sentry/node": "catalog:",
+    "croner": "^9.1.0",
+    "date-fns": "catalog:",
+    "dotenv": "catalog:",
+    "expo-server-sdk": "catalog:",
+    "payload": "catalog:",
+    "react": "catalog:",
+    "react-tweet": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@news-spend-media/config": "workspace:*",
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  }
+}

@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "@news-spend-media/tailwind-config";
+
+@layer utilities {
+  input[type="number"].arrow-hide::-webkit-outer-spin-button,
+  input[type="number"].arrow-hide::-webkit-inner-spin-button,
+  input[type="number"].arrow-hide {
+    margin: 0;
+    -moz-appearance: textfield !important;
+    -webkit-appearance: none;
+  }
+}
+
+html {
+  font-size: 18px;
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+}

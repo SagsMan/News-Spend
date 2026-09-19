@@ -1,0 +1,40 @@
+{
+	"name": "@news-spend-media/payload-cpanel-storage",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"main": "./src/index.ts",
+	"types": "./src/index.ts",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"scripts": {
+		"build": "tsc --build --verbose --f",
+		"lint": "bun x biome check .",
+		"lint:fix": "bun x biome check --write .",
+		"check-types": "tsc --noEmit",
+		"test": "bun test"
+	},
+	"dependencies": {
+		"@news-spend-media/logger": "workspace:*",
+		"@payloadcms/plugin-cloud-storage": "catalog:",
+		"@payloadcms/ui": "catalog:",
+		"ssh2-sftp-client": "catalog:"
+	},
+	"devDependencies": {
+		"@types/node": "catalog:",
+		"@types/react": "catalog:",
+		"@types/react-dom": "catalog:",
+		"@types/ssh2-sftp-client": "^9.0.4",
+		"next": "catalog:",
+		"payload": "catalog:",
+		"react": "catalog:",
+		"react-dom": "catalog:",
+		"ssh2": "catalog:",
+		"typescript": "catalog:"
+	},
+	"peerDependencies": {
+		"next": "catalog:",
+		"payload": "catalog:"
+	}
+}

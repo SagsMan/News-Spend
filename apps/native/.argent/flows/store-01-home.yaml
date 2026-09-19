@@ -1,0 +1,59 @@
+# Screenshot 1 — the news feed (Home tab).
+#
+# First flow of the run, so it also clears the one-time onboarding:
+#   - App Tracking Transparency: a system alert whose appearance is not
+#     reliable on the simulator. Handled with a blind tap at its button
+#     position; if the alert is not up, that taps dead space on the welcome
+#     screen and nothing happens.
+#   - "Continue as a guest" + the skip-registration sheet.
+# Later flows launch straight into this guest state (goldie installs once per
+# run and does not clear data between flows).
+#
+# The release build is slow to first paint on the simulator, hence the long
+# await timeouts.
+steps:
+  - launch: com.newsspend.app
+
+  - await:
+      visible:
+        text: Continue as a guest
+      timeout: 150000
+  - wait: 3500
+
+  - echo: Blind-tap the "Ask App Not to Track" position, in case the ATT system alert is showing
+  - tap:
+      x: 0.5
+      y: 0.603
+  - wait: 1200
+
+  - tap:
+      text: Continue as a guest
+
+  # The skip-registration sheet. The "I agree" checkbox has no label; it is at
+  # the left end of the "I agree to the Terms of Service and Privacy Policy"
+  # row. "YES, SKIP" stays disabled until it is ticked.
+  - echo: Tick the unlabeled "I agree" checkbox at the left of the Terms/Privacy row
+  - await:
+      visible:
+        text: "Are you sure you want to skip registration"
+      timeout: 15000
+  - tap:
+      x: 0.115
+      y: 0.545
+  - await:
+      visible:
+        text: "YES, SKIP"
+      timeout: 10000
+  - tap:
+      text: "YES, SKIP"
+
+  - await:
+      visible:
+        text: NEWS SPEND MEDIA
+      timeout: 60000
+  - await:
+      visible:
+        text: Trending Books
+      timeout: 30000
+  - await:
+      idle: true

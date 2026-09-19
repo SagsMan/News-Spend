@@ -1,0 +1,124 @@
+{
+  "project_info": {
+    "project_number": "135112083518",
+    "project_id": "news-spend-media",
+    "storage_bucket": "news-spend-media.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135112083518:android:1c3c809d7bdc4b1cdae96f",
+        "android_client_info": {
+          "package_name": "com.newsspend.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq5H-pvPVxbDMG0MXMHEvMU0dDPEAEv6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135112083518:android:6ab64fff6f9fd2e1dae96f",
+        "android_client_info": {
+          "package_name": "com.newsspend.app.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq5H-pvPVxbDMG0MXMHEvMU0dDPEAEv6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135112083518:android:91dd2f3304b2f5a8dae96f",
+        "android_client_info": {
+          "package_name": "com.newsspend.app.preview"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq5H-pvPVxbDMG0MXMHEvMU0dDPEAEv6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135112083518:android:c9b2a5532decac6fdae96f",
+        "android_client_info": {
+          "package_name": "com.newsspend.media"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq5H-pvPVxbDMG0MXMHEvMU0dDPEAEv6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135112083518:android:570bf333ce5eda35dae96f",
+        "android_client_info": {
+          "package_name": "com.newsspend.media.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq5H-pvPVxbDMG0MXMHEvMU0dDPEAEv6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135112083518:android:3fd8a1d0f23dc8ecdae96f",
+        "android_client_info": {
+          "package_name": "com.newsspend.media.preview"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq5H-pvPVxbDMG0MXMHEvMU0dDPEAEv6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

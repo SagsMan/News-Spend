@@ -1,0 +1,53 @@
+{
+  "tasks": [
+    {
+      "args": ["i"],
+      "command": "pnpm",
+      "group": "none",
+      "label": "pnpm install",
+      "presentation": {
+        "close": true,
+        "panel": "new",
+        "reveal": "always",
+        "revealProblems": "onProblem",
+        "showReuseMessage": false
+      },
+      "type": "process"
+    },
+    {
+      "args": ["payload", "generate:types"],
+      "command": "pnpm",
+      "group": "none",
+      "label": "generate types",
+      "options": {
+        "cwd": "${workspaceFolder}/apps/payload"
+      },
+      "presentation": {
+        "close": true,
+        "panel": "new",
+        "reveal": "always",
+        "revealProblems": "onProblem",
+        "showReuseMessage": false
+      },
+      "type": "process"
+    },
+    {
+      "args": ["payload", "generate:importMap"],
+      "command": "pnpm",
+      "group": "none",
+      "label": "generate import map",
+      "options": {
+        "cwd": "${workspaceFolder}/apps/payload"
+      },
+      "presentation": {
+        "close": true,
+        "panel": "new",
+        "reveal": "always",
+        "revealProblems": "onProblem",
+        "showReuseMessage": false
+      },
+      "type": "process"
+    }
+  ],
+  "version": "2.0.0"
+}

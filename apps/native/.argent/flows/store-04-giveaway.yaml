@@ -1,0 +1,22 @@
+# Screenshot 4 — the Giveaway screen: prize carousel, countdown, entrants.
+# Assumes the guest session from store-01-home.
+steps:
+  - launch: com.newsspend.app
+  - await:
+      visible:
+        text: NEWS SPEND MEDIA
+  - tap:
+      text: Discover
+  - await:
+      visible:
+        text: POINTS MALL
+  - tap:
+      text: Giveaway
+  - await:
+      visible:
+        text: Win Dream Points
+  - await:
+      visible:
+        text: Enter Giveaway
+  - await:
+      idle: true
